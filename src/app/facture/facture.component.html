@@ -1,0 +1,42 @@
+<br>
+<div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+        <th scope="col">dateaFacture</th>
+      <th scope="col">montant</th>
+      <th scope="col">commade</th>
+      <th scope="col">action</th>
+
+     
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let facture of pageFacture">
+        <th scope="row" >{{facture.dateaFacture}}</th>
+        <th scope="row" >{{facture.montant}}</th>
+        <th scope="row" >{{facture.commande.numeroCommande}}</th>
+
+        <td>  <button mat-raised-button color="primary" (click)="onEdit(facture.numeroFacture)">editer</button>  <button mat-raised-button color="warn" (click)="supprimer(facture.numeroFacture)" style="margin-left: 10px;">
+              supprimer</button></td>
+        
+        
+        
+      
+      
+      </tr>
+    </tbody>
+  </table> 
+
+</div>
+
+<div class="container">
+
+</div>
+<div class="card-footer">
+  <button class="btn btn-succes" (click)="  onCreate1()" >ajouter facture</button>
+        </div>
+<br>
+

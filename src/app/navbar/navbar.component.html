@@ -1,0 +1,22 @@
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-light p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-light " style="background-color: #e3f2fd;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
+      data-toggle="collapse"  (click)="afficherSidebar()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav >
+          
+          <form class="form-inline">
+          
+            <button class="btn btn-outline-secondary" type="submit" (click)="logout()">Log out</button>
+          </form>
+        </nav>
+    </nav>
+  </div>

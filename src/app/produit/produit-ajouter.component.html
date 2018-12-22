@@ -1,0 +1,18 @@
+<div >
+                
+      
+               nom:<br> <input path="nom" class="form-control" placeholder="nom" [(ngModel)]="produit.nom"/>
+         
+          
+           <label>prix:</label>  <br><input path="salle" class="form-control" placeholder="prenom"[(ngModel)]="produit.prix" />
+           <label>quantité:</label>  <br><input path="salle" class="form-control" placeholder="prenom"[(ngModel)]="produit.quantite" />
+          
+          <br>
+          <div class="form-group">
+            <label for="myimage">Produit Photo</label>
+            <input type="file" (change)="handleFileSelect($event)" placeholder="Choose file..." accept="image/*" />
+          </div>
+           <br>
+          <button class="btn btn-outline-info" (click)="saveClient()"> envoyer demande</button>
+          
+    </div>

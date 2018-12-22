@@ -1,0 +1,24 @@
+<div >  
+    date:<br> <input type="date" path="date Facture" class="form-control" placeholder="date Facture" [(ngModel)]="commande.dateCommande"/>
+
+<label>numero client:</label> <select class="form-control" [(ngModel)]="commande.client.numeroClient">
+    <option  [ngValue]="option.numeroClient" *ngFor="let option of pageClient" >{{option.numeroClient}}</option>
+    </select>
+<br>
+<div >
+<label>numero Produit:</label> <select  class="form-control" [(ngModel)]="produit">
+        <option  [ngValue]="options" *ngFor="let options of pageProduit" >{{options.numeroProduit}}</option>
+        </select><label>numero Produit:</label> <select class="form-control" [(ngModel)]="produit1">
+            <option  [ngValue]="options" *ngFor="let options of pageProduit" >{{options.numeroProduit}}</option>
+            </select>
+            
+
+   </div>
+
+<button class="btn btn-outline-info" (click)="saveCommande()"> envoyer demande</button>
+</div>
+
+
+
+
+

@@ -1,0 +1,37 @@
+<div id="content" #content>
+      <h1 class="text-danger" style="margin-left:60px;">Livraison</h1><br/>
+<strong>numero livraison: </strong> <strong class="text-info">{{pageLivraison?.numeroLivraison}}</strong><br>
+ <strong>date livraison:</strong> <strong class="text-info">{{pageLivraison?.dateLivraison}}</strong>
+ <p class="text-warning">*******************************************************</p><br>
+ <h1 class="text-danger" style="margin-left: 60px;">Commande</h1><br/>
+ <strong>numero commande:</strong> <strong class="text-info"> {{pageLivraison?.commande?.numeroCommande}}</strong><br>
+ <strong>date commande:</strong> <strong class="text-info">{{pageLivraison?.commande?.dateCommande}}</strong><br>
+ <strong>prix de cette commande:</strong> <strong class="text-info">{{pageLivraison?.commande?.prix}} DH </strong>
+ <p class="text-warning">********************************************************************* </p><br/>
+ <h1 class="text-danger" style="margin-left:60px;">Client</h1><br/>
+ <strong>numero client :</strong>  <strong class="text-info">{{pageLivraison?.commande?.client?.numeroClient}}</strong><br/>
+ <strong>nom:</strong> <strong class="text-info">{{pageLivraison?.commande?.client?.nom}}  {{pageLivraison?.commande?.client?.prenom}}</strong><br/>
+ <strong>adress:</strong> <strong class="text-info">{{pageLivraison?.commande?.client?.adress}}</strong><br/>
+ <strong>telephone:</strong> <strong class="text-info">{{pageLivraison?.commande?.client?.telephone}}</strong><br/>
+ <p class="text-danger">*****************************************************</p><br/>
+
+ <h1 class="text-danger" style="margin-left: 60px;">Produit</h1><br/>
+ <br/>
+
+
+<div *ngFor="let livraisons of pageLivraison?.commande.produits">
+  <img src="data:image/jpg;base64,{{livraisons.photo}}" class="img-responsive" width="180" height="160" style="margin-left: 30px;" /><br>
+ <strong>numero produit:</strong> <strong class="text-info">{{livraisons.numeroProduit}}</strong><br>
+ <strong>nom produit:</strong>   <strong class="text-info">{{livraisons.nom}}</strong><br>
+ <strong>quantite:</strong>  <strong class="text-info">{{livraisons.quantite}}</strong><br>
+ <strong>prix du produit:</strong>  <strong class="text-info"> {{livraisons.prix}}</strong><br>
+ <p class="text-success">*****************************************************</p>
+
+    
+
+</div>
+
+
+ 
+
+

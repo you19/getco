@@ -1,0 +1,19 @@
+<div >  
+    date:<br> <input type="date" path="date Facture" class="form-control" placeholder="date Facture" [(ngModel)]="facture.dateaFacture"/>
+<label>montant:</label>  <br><input path="montant" class="form-control" placeholder="montant"[(ngModel)]="facture.montant" />
+  <div>
+            <label class="control-label"> numero commande :</label>
+            <select  [(ngModel)]="facture.commande.numeroCommande">
+                <option [ngValue]="option.numeroCommande" *ngFor="let option of pageCommande" >
+                        {{option.numeroCommande}}
+                </option>
+            </select>
+
+        </div>
+Fin de la discussion
+Écrivez un message...
+
+<br>
+
+<button class="btn btn-outline-info" (click)="saveFacture()"> envoyer demande</button>
+</div>

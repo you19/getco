@@ -1,0 +1,27 @@
+
+        <div class="row" *ngIf="showHideSidebar; else withoutSideBar">
+    <div class="col-lg-2" *ngIf="showHideSidebar ">    
+
+    <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-10">
+
+        <app-navbar [showSideBar]="showHideSidebar"
+        (showSidebarChange)="onShowSidebarChange($event)"
+        ></app-navbar>
+       <app-content></app-content>
+    </div>
+    </div>
+    <ng-template #withoutSideBar>
+            <div class=col-lg-12>
+              <app-navbar
+               [showSideBar]="showHideSidebar"
+              (showSidebarChange)= "onShowSidebarChange($event)"></app-navbar>
+          
+          
+              <div class="container spacer">
+                <router-outlet> </router-outlet>
+              </div>
+            </div>
+          </ng-template>
+    

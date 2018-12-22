@@ -1,0 +1,58 @@
+<br>
+<div class="card">
+    <div class="card-header bg-info text-white">gestion abonnement</div>
+    <div class="card-body">
+      <div>
+<label >nom</label>
+<input  type="text" [(ngModel)]="nom" style="margin-left: 20px;"/>
+<button mat-raised-button color="accent"  (click)="chercher()" style="margin-left: 10px;">chercher</button>
+<div *ngIf="erreur"> commande n est pas trouver</div>
+   
+      </div>
+      <br>
+      <br>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                  <th scope="col">num</th>
+                <th scope="col">photo</th>
+                <th scope="col">nom</th>
+                <th scope="col">prix</th>
+                <th scope="col">quantite</th>
+                <th scope="col">action</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let produit of pageProduit?.content">
+                  <th scope="row" >{{produit.numeroProduit}}</th>
+                 
+                  <td>
+                    <img src="data:image/jpg;base64,{{produit.photo}}" class="img-responsive" width="100" height="80"/>
+                  </td>
+                 <td>{{produit.nom}}</td>
+                  <td>{{produit.prix}}</td>
+                  <td>{{produit.quantite}}</td>
+                  
+                <td>  <button mat-raised-button color="primary" (click)="commander(produit)">commander</button> 
+                 
+                
+                </tr>
+              </tbody>
+            </table> 
+      
+      </div>
+
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li *ngFor="let p of pages; let i=index"><a [ngClass]="{active: i==page}" class="dropdown-item" (click)="goToPage(i)">{{i}}</a> </li>
+        </ul>
+      </div>
+      <br>
+      <div class="card-footer">
+  <button class="btn btn-succes" (click)="envoyer()" >commander produit</button>
+        </div>
+       
+     
+    
+      

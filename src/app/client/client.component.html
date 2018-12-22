@@ -1,0 +1,49 @@
+<br>
+<br>
+<div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      
+        <th scope="col">id</th>
+        <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">adress</th>
+      <th scope="col">telephone</th>
+      <th scope="col">action</th>
+
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of pageClient">
+      
+        <th scope="row" >{{client.numeroClient}}</th>
+        <th scope="row" >{{client.nom}}</th>
+        <th scope="row" >{{client.prenom}}</th>
+    
+        <td>{{client.adress}}</td>
+        <td>{{client.telephone}}</td>
+        <td>  <button mat-raised-button color="primary" (click)="onEdit(client.numeroClient)">editer</button>
+          <button mat-raised-button color="warn" (click)="supprimer(client.numeroClient)" style="margin-left: 10px;">
+            supprimer</button></td>
+        
+        
+      
+      
+      </tr>
+    </tbody>
+  </table> 
+
+</div>
+
+<div class="container">
+
+</div>
+<div class="card-footer">
+  <button class="btn btn-succes" (click)="  onCreate1()" >ajouter client</button>
+ 
+        </div>
+<br>
+
